@@ -1,0 +1,109 @@
+{
+  "root": true,
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "react-hooks",
+    "simple-import-sort",
+    "import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          // un-ban a type that's banned by default
+          "{}": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    // Import React
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+
+    "react/display-name": "off",
+
+    "import/export": "warn",
+
+    "standard/no-callback-literal": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+
+    "camelcase": [2, { "properties": "always" }],
+
+    "arrow-parens": ["error"],
+
+    "semi": "off",
+    "prefer-destructuring": "error",
+
+    "max-len": [
+      "warn",
+      {
+        "code": 100,
+        "ignoreUrls": true,
+        "ignorePattern": "import"
+      }
+    ],
+
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    "operator-linebreak": "warn",
+
+    // React hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+
+    // Sort imports
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
+    "import/no-duplicates": ["error"],
+
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-closing-bracket-location": [
+      "off",
+      {
+        "nonEmpty": "line-aligned",
+        "selfClosing": "line-aligned"
+      }
+    ],
+
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+
+    "jsx-quotes": ["error", "prefer-double"],
+    "comma-dangle": ["error", "only-multiline"],
+
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"]
+    }
+  ],
+  "ignorePatterns": ["docs/*"]
+}

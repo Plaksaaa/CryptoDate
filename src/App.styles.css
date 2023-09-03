@@ -1,0 +1,15 @@
+* p,a, h2, button, span{
+  font-family: 'Bungee';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+margin: 0;
+}

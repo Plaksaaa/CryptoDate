@@ -1,0 +1,128 @@
+{
+  "name": "CryptoDate",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@thirdweb-dev/react": "^3.11.11",
+    "@thirdweb-dev/sdk": "^3.10.10",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-scrollspy": "^3.3.5",
+    "@types/react-slick": "^0.23.10",
+    "add": "^2.0.6",
+    "bootstrap": "^5.3.1",
+    "customize-cra": "^1.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "ethers": "^5.7.2",
+    "intl-messageformat": "^10.1.4",
+    "inversify": "^6.0.1",
+    "inversify-react": "^1.0.2",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.5.2",
+    "react-hook-form": "^7.34.2",
+    "react-parallax": "^3.5.1",
+    "react-query": "^3.39.3",
+    "react-query-devtools": "^2.6.3",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-scrollspy": "^3.4.3",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.0.8",
+    "react-ui-scrollspy": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^5.3.3",
+    "tss-react": "^3.7.0",
+    "typescript": "^4.7.4",
+    "typescript-eslint": "^0.0.1-alpha.0",
+    "uuid": "^9.0.0",
+    "wallets-wrapper": "^0.0.18",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "supabase:start": "npx supabase functions serve --env-file ./supabase/.env.local",
+    "supabase:setenv": "npx supabase secrets set --env-file ./supabase/.env.local",
+    "build": "react-app-rewired build",
+    "lint": "eslint src -c .eslintrc --ext jsmo,jsx,ts,tsx --fix",
+    "lint-only-errors": "eslint src -c .eslintrc --ext jsmo,jsx,ts,tsx --fix --quiet",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.21.0",
+    "@types/react-lazyload": "^3.2.0",
+    "@types/react-router-dom": "5.3.1",
+    "@types/styled-components": "5.1.15",
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "path": "^0.12.7",
+    "prettier": "^2.7.1",
+    "react-app-rewired": "^2.2.1",
+    "react-snap": "^1.23.0",
+    "supabase": "^1.57.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.(js|jsx|ts|tsx|jsmo)": [
+      "prettier --write",
+      "eslint -c .eslintrc --ext jsmo,jsx,ts,tsx --fix",
+      "git add"
+    ]
+  }
+}
